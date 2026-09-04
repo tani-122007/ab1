@@ -1,0 +1,680 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Hospital - Doctor Schedule</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+      href="doc.css">
+
+<style>
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+
+            <div class="logo-text">
+                <strong>SMART HOSPITAL</strong>
+                <span>Care Today, Healthier Tomorrow</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+
+            <div class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Patients</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Appointments</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-bed"></i>
+                <span>Bed Management</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Staff Management</span>
+                <i class="fa-solid fa-chevron-down menu-arrow"></i>
+            </div>
+
+            <div class="menu-item active">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Doctor Schedule</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-user-nurse"></i>
+                <span>Nurse Schedule</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-building"></i>
+                <span>Departments</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-briefcase-medical"></i>
+                <span>Resource Management</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>Patient Monitoring</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-bell"></i>
+                <span>Alerts & Notifications</span>
+                <span style="background:#e83939;padding:4px 7px;border-radius:50%;font-size:10px;margin-left:auto;">3</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Reports & Analytics</span>
+            </div>
+
+            <div class="menu-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="hospital-icon">
+                <i class="fa-solid fa-hospital"></i>
+            </div>
+            <p>
+                “Better Management<br>
+                For Healthier Tomorrow”
+            </p>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <i class="fa-solid fa-bars hamburger"></i>
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text"
+                       placeholder="Search patients, doctors, departments...">
+            </div>
+
+            <div class="top-actions">
+
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <div class="admin">
+                    <div class="admin-avatar">A</div>
+
+                    <div class="admin-info">
+                        <strong>Hospital Admin</strong>
+                        <span>A Hospital</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+                <div class="date-box">
+                    <i class="fa-regular fa-calendar"></i>
+                    <div>
+                        <strong>Mon, 2 Sep 2025</strong><br>
+                        09:15 AM
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+
+        <section class="content">
+
+            <!-- PAGE HEADER -->
+            <div class="page-header">
+
+                <div class="title-area">
+                    <div class="title-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+
+                    <div>
+                        <h1>Doctor Schedule</h1>
+                        <p>Manage and view doctors' duty schedules</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STATISTICS -->
+<div class="stats">
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <div>
+            <h4>Total Doctors</h4>
+            <div class="stat-number">48</div>
+            <div class="stat-status">
+                <i class="fa-solid fa-plus"></i>
+                42 On Schedule
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-user-clock"></i>
+        </div>
+        <div>
+            <h4>On Duty Today</h4>
+            <div class="stat-number">28</div>
+            <div class="stat-status">
+                <i class="fa-solid fa-circle"></i>
+                Currently Working
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-user-clock"></i>
+        </div>
+        <div>
+            <h4>Off Duty Today</h4>
+            <div class="stat-number">12</div>
+            <div class="stat-status" style="color:#7c8794">
+                <i class="fa-solid fa-circle"></i>
+                Not Scheduled
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">
+            <i class="fa-solid fa-building"></i>
+        </div>
+        <div>
+            <h4>Departments</h4>
+            <div class="stat-number">10</div>
+            <div class="stat-status">
+                <i class="fa-solid fa-plus"></i>
+                Active Departments
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= DASHBOARD GRID ================= -->
+
+<div class="dashboard-grid">
+
+    <!-- DOCTORS -->
+    <div class="card">
+        <div class="card-title">Doctors</div>
+
+        <div class="doctor-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input placeholder="Search doctor...">
+        </div>
+
+        <div class="doctor-list">
+
+            <div class="doctor selected">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Arjun Mehta</div>
+                    <div class="speciality">Cardiology</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot green"></span>On Duty
+                </div>
+            </div>
+
+            <div class="doctor">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Priya Sharma</div>
+                    <div class="speciality">Neurology</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot green"></span>On Duty
+                </div>
+            </div>
+
+            <div class="doctor">
+                <img src="https://randomuser.me/api/portraits/men/41.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Rahul Verma</div>
+                    <div class="speciality">Orthopedics</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot orange"></span>In 1 hr
+                </div>
+            </div>
+
+            <div class="doctor">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Neha Kapoor</div>
+                    <div class="speciality">General Medicine</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot red"></span>Off Duty
+                </div>
+            </div>
+
+            <div class="doctor">
+                <img src="https://randomuser.me/api/portraits/men/51.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Suresh Iyer</div>
+                    <div class="speciality">Pediatrics</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot green"></span>On Duty
+                </div>
+            </div>
+
+            <div class="doctor">
+                <img src="https://randomuser.me/api/portraits/women/49.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Anjali Singh</div>
+                    <div class="speciality">Dermatology</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot red"></span>Off Duty
+                </div>
+            </div>
+
+            <div class="doctor">
+                <img src="https://randomuser.me/api/portraits/men/67.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Vikram Das</div>
+                    <div class="speciality">Emergency</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot green"></span>On Duty
+                </div>
+            </div>
+
+            <div class="doctor">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg">
+                <div class="doctor-info">
+                    <div class="doctor-name">Dr. Kavita Rao</div>
+                    <div class="speciality">Radiology</div>
+                </div>
+                <div class="doctor-status">
+                    <span class="status-dot orange"></span>In 2 hrs
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCHEDULE -->
+    <div class="card schedule-card">
+        <div class="schedule-header">
+            <div class="doctor-profile">
+                <img class="profile-img" src="https://randomuser.me/api/portraits/men/32.jpg">
+                <div>
+                    <div class="schedule-doctor-name">
+                        Schedule for Dr. Arjun Mehta
+                    </div>
+                    <div class="doctor-details">
+                        Cardiology &nbsp; | &nbsp; Specialist
+                    </div>
+                    <div class="doctor-details">
+                        A Hospital
+                    </div>
+                    <div class="contact">
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            arjun.mehta@ahospital.org
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            +91 98765 43210
+                        </div>
+                    </div>
+                    <div class="duty-badge">
+                        <i class="fa-solid fa-circle"></i>
+                        On Duty Today
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-controls">
+                <button class="today-btn">
+                    Today
+                </button>
+                <button class="arrow-btn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="date-selector">
+                    <i class="fa-regular fa-calendar"></i>
+                    Mon, 2 Sep 2025
+                </div>
+            </div>
+        </div>
+
+        <!-- TABLE -->
+         <!-- TABLE -->
+<div class="schedule-table">
+
+    <div class="table-head">
+        <div>Time</div>
+        <div>Activity / Location</div>
+        <div>Type</div>
+        <div>Status</div>
+    </div>
+
+    <div class="schedule-row">
+        <div class="time">
+            08:00 AM - 09:00 AM
+        </div>
+        <div class="activity">
+            <strong>Morning Rounds</strong>
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                ICU - 2nd Floor
+            </div>
+        </div>
+        <div>
+            <span class="type rounds">Rounds</span>
+        </div>
+        <div>
+            <span class="status completed">
+                Completed
+            </span>
+        </div>
+    </div>
+
+    <div class="schedule-row">
+        <div class="time">
+            09:00 AM - 10:00 AM
+        </div>
+        <div class="activity">
+            <strong>Review Reports</strong>
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                Cardiology Dept.
+            </div>
+        </div>
+        <div>
+            <span class="type consult">
+                Consultation
+            </span>
+        </div>
+        <div>
+            <span class="status completed">
+                Completed
+            </span>
+        </div>
+    </div>
+
+    <div class="schedule-row current">
+        <div class="time">
+            10:00 AM - 01:00 PM
+        </div>
+        <div class="activity">
+            <strong>OPD - Patient Consultation</strong>
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                OPD Block - Room 3
+            </div>
+        </div>
+        <div>
+            <span class="type opd">
+                OPD
+            </span>
+        </div>
+        <div>
+            <span class="status ongoing">
+                Ongoing
+            </span>
+        </div>
+    </div>
+
+    <div class="schedule-row">
+        <div class="time">
+            01:00 PM - 02:00 PM
+        </div>
+        <div class="activity">
+            <strong>Lunch Break</strong>
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                Cafeteria
+            </div>
+        </div>
+        <div>
+            <span class="type break">
+                Break
+            </span>
+        </div>
+        <div>
+            <span class="status upcoming">
+                Upcoming
+            </span>
+        </div>
+    </div>
+
+    <div class="schedule-row">
+        <div class="time">
+            02:00 PM - 04:00 PM
+        </div>
+        <div class="activity">
+            <strong>Follow-up Appointments</strong>
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                OPD Block - Room 3
+            </div>
+        </div>
+        <div>
+            <span class="type opd">
+                OPD
+            </span>
+        </div>
+        <div>
+            <span class="status upcoming">
+                Upcoming
+            </span>
+        </div>
+    </div>
+
+    <div class="schedule-row">
+        <div class="time">
+            04:00 PM - 05:00 PM
+        </div>
+        <div class="activity">
+            <strong>Ward Visit</strong>
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                General Ward
+            </div>
+        </div>
+        <div>
+            <span class="type rounds">
+                Rounds
+            </span>
+        </div>
+        <div>
+            <span class="status upcoming">
+                Upcoming
+            </span>
+        </div>
+    </div>
+
+    <div class="schedule-row">
+        <div class="time">
+            05:00 PM - 06:00 PM
+        </div>
+        <div class="activity">
+            <strong>Case Discussion</strong>
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                Conference Room
+            </div>
+        </div>
+        <div>
+            <span class="type meeting">
+                Meeting
+            </span>
+        </div>
+        <div>
+            <span class="status upcoming">
+                Upcoming
+            </span>
+        </div>
+    </div>
+
+</div>
+
+<div class="notice">
+    <i class="fa-solid fa-circle-info"></i>
+    Duty schedule notifications are automatically sent to the doctor via email and in-app alerts.
+</div>
+
+</div>
+
+<!-- ================= RIGHT COLUMN ================= -->
+ <!-- ================= RIGHT COLUMN ================= -->
+
+<div class="right-column">
+
+    
+
+    <!-- UPCOMING DUTIES -->
+    <div class="card duties">
+
+        <div class="duties-header">
+            <strong>Upcoming Duties</strong>
+            <a href="#">View All</a>
+        </div>
+
+        <div class="duty">
+            <span class="duty-dot"></span>
+            <div class="duty-info">
+                <strong>Tue, 3 Sep 2025</strong>
+                <div class="duty-time">
+                    10:00 AM - 05:00 PM
+                </div>
+            </div>
+            <div class="duty-label">
+                OPD<br>
+                Room 3
+            </div>
+        </div>
+
+        <div class="duty">
+            <span class="duty-dot"></span>
+            <div class="duty-info">
+                <strong>Wed, 4 Sep 2025</strong>
+                <div class="duty-time">
+                    09:00 AM - 01:00 PM
+                </div>
+            </div>
+            <div class="duty-label surgery">
+                Surgery<br>
+                OT - 1
+            </div>
+        </div>
+
+        <div class="duty">
+            <span class="duty-dot"></span>
+            <div class="duty-info">
+                <strong>Thu, 5 Sep 2025</strong>
+                <div class="duty-time">
+                    10:00 AM - 04:00 PM
+                </div>
+            </div>
+            <div class="duty-label">
+                OPD<br>
+                Room 3
+            </div>
+        </div>
+
+        <div class="duty">
+            <span class="duty-dot red"></span>
+            <div class="duty-info">
+                <strong>Fri, 6 Sep 2025</strong>
+                <div class="duty-time">
+                    08:00 AM - 08:00 PM
+                </div>
+            </div>
+            <div class="duty-label emergency">
+                Emergency<br>
+                ER Block
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="duty">
+            <span class="duty-dot green"></span>
+            <div class="duty-info">
+                <strong>ON DUTY</strong>
+                
+            </div>
+            
+        </div>
+        <div class="duty">
+            <span class="duty-dot red"></span>
+            <div class="duty-info">
+                <strong>OFF DUTY</strong>
+                
+            </div>
+            
+        </div>
+
+    
+
+
+    
+
+        
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+</body>
+</html>
